@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Responsive Web Developer Starter - devchallenges.io</title>
+    <link
+      rel="icon"
+      href="images/favicon.ico"
+      type="image/x-icon"
+      sizes="any"
+    />
+  </head>
+  <body class="h-screen font-BeVietnamPro bg-colorDarkPrimary">
+    <div class="main-container w-full h-screen">
+      <div class="header-container w-full h-1/3">
+        <div class="header flex justify-center items-center pt-8">
+          <div
+            class="search-box flex py-2 px-3 bg-colorDarkPrimary w-2/6 rounded-md text-colorLightOverlay max-sm:w-5/6 max-md:w-4/6 max-lg:w-4/6"
+          >
+            <i class="ri-search-2-line"></i>
+            <input
+              class="ml-2 placeholder:text-colorLightOverlay bg-transparent w-full focus:text-colorLightSecondary focus:outline-none sm:text-sm"
+              placeholder="username"
+              type="text"
+              name="search"
+              autocomplete="off"
+              id="input-search-username"
+            />
+          </div>
+        </div>
+        <div class="result-search flex justify-center items-center pt-2">
+          <div
+            class="result-search-box hidden py-2 px-3 bg-colorDarkPrimary w-2/6 rounded-md text-colorLightOverlay transition-all hover:bg-colorLightOverlay hover:cursor-pointer max-sm:w-5/6 max-md:w-4/6 max-lg:w-4/6"
+            id="result-search-box"
+          >
+            <div
+              class="contianer-result-search-data animate-pulse flex items-center"
+            >
+              <div class="img-box mr-2">
+                <div
+                  class="image-user p-2 size-[80px] rounded-lg max-md:mr-4 max-md:size-[80px]"
+                >
+                  <div
+                    class="h-full w-full bg-colorLightOverlay rounded-md"
+                  ></div>
+                </div>
+              </div>
+              <div class="username-bio-box">
+                <div class="h-2 w-1/3 rounded-full bg-colorLightOverlay"></div>
+                <div
+                  class="h-2 w-24 mt-3 rounded-full bg-colorLightOverlay"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="content-container w-full h-2/3 pt-2 px-44 max-lg:px-20 max-md:px-16 max-sm:px-10"
+      >
+        <div class="section-user-data">
+          <!-- please check for align cotainer and match with next div -->
+          <div
+            class="container-user-data flex items-start max-md:justify-between max-sm:justify-start"
+          >
+            <div
+              class="image-user relative bottom-14 p-2 bg-colorDarkPrimary size-[110px] rounded-lg max-md:mr-4 max-md:size-[95px]"
+            >
+              <img
+                class="size-full rounded-lg"
+                id="imgUser"
+                src="./user.png"
+                alt="image user"
+              />
+            </div>
+
+            <div
+              class="main-data-user flex justify-evenly items-center ml-12 max-md:ml-0 max-sm:flex-col max-sm:items-start"
+            >
+              <div
+                class="followers-user flex justify-evenly items-center w-fit py-3 px-3 rounded-xl bg-colorDarkBackground divide-x max-sm:mb-5"
+              >
+                <p class="text-colorLightOverlay mr-4 text-sm">Followers</p>
+                <p
+                  class="data-profile-user text-colorLightSecondary pl-4 max-sm:text-sm"
+                >
+                  ----
+                </p>
+              </div>
+
+              <div
+                class="folliwing-user flex justify-evenly items-center w-fit ml-5 py-3 px-3 rounded-xl bg-colorDarkBackground divide-x max-sm:mb-5 max-sm:ml-0"
+              >
+                <p class="text-colorLightOverlay mr-4 text-sm">Following</p>
+                <p
+                  class="data-profile-user text-colorLightSecondary pl-4 max-sm:text-sm"
+                >
+                  ----
+                </p>
+              </div>
+
+              <div
+                class="location-user flex justify-evenly items-center w-fit ml-5 py-3 px-3 rounded-xl bg-colorDarkBackground divide-x max-sm:mb-5 max-sm:ml-0"
+              >
+                <p class="text-colorLightOverlay mr-4 text-sm">Location</p>
+                <p
+                  class="data-profile-user text-colorLightSecondary pl-4 max-sm:text-sm"
+                >
+                  -----
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-user-name text-colorLightSecondary">
+            <h1 class="username text-3xl font-semibold">Github</h1>
+            <p class="bio-user text-bio font-light max-sm:text-sm">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="section-repo-user mt-10 font-BeVietnamPro flex flex-col items-center"
+        >
+          <div
+            class="continer-repo-user flex justify-between flex-wrap"
+            id="containerRepos"
+          >
+            <a
+              href="#"
+              target="_blank"
+              class="w-[48%] p-4 mb-12 rounded-2xl bg-gradient-to-r from-colorDarkBackground to-colorDarkSecondary max-sm:w-full max-sm:mb-6"
+            >
+              <h2
+                class="title-repo font-normal text-lg text-colorLightBackground max-sm:text-base"
+              >
+                .github
+              </h2>
+
+              <p
+                class="desc-repo text-sm text-colorLightSecondary font-light mt-4 mb-5"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div
+                class="more-data-repo flex items-center text-colorLightSecondary max-sm:text-sm"
+              >
+                <!-- if have license -->
+                <div class="license flex">
+                  <img src="./Chield_alt.svg" alt="chield" />
+                  <p>MIT</p>
+                </div>
+
+                <div class="nesting flex ml-3">
+                  <img src="./Nesting.svg" alt="nesting" />
+                  <p>243</p>
+                </div>
+
+                <div class="star flex ml-3">
+                  <img src="./Star.svg" alt="star" />
+                  <p>63</p>
+                </div>
+
+                <div
+                  class="time-update flex text-[12px] ml-5 max-sm:text-[10px]"
+                >
+                  <p>updated 3 days ago</p>
+                </div>
+              </div>
+            </a>
+            <a
+              class="w-[48%] p-4 mb-12 rounded-2xl bg-gradient-to-r from-colorDarkBackground to-colorDarkSecondary max-sm:w-full max-sm:mb-6"
+            >
+              <h2
+                class="title-repo font-normal text-lg text-colorLightBackground max-sm:text-base"
+              >
+                .github
+              </h2>
+
+              <p
+                class="desc-repo text-sm text-colorLightSecondary font-light mt-4 mb-5"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div
+                class="more-data-repo flex items-center text-colorLightSecondary max-sm:text-sm"
+              >
+                <!-- if have lisence -->
+                <div class="license flex">
+                  <img src="./Chield_alt.svg" alt="chield" />
+                  <p>MIT</p>
+                </div>
+
+                <div class="nesting flex ml-3">
+                  <img src="./Nesting.svg" alt="nesting" />
+                  <p>243</p>
+                </div>
+
+                <div class="star flex ml-3">
+                  <img src="./Star.svg" alt="star" />
+                  <p>63</p>
+                </div>
+
+                <div
+                  class="time-update flex text-[12px] ml-5 max-sm:text-[10px]"
+                >
+                  <p>updated 3 days ago</p>
+                </div>
+              </div>
+            </a>
+            <a
+              class="w-[48%] p-4 mb-12 rounded-2xl bg-gradient-to-r from-colorDarkBackground to-colorDarkSecondary max-sm:w-full max-sm:mb-6"
+            >
+              <h2
+                class="title-repo font-normal text-lg text-colorLightBackground max-sm:text-base"
+              >
+                .github
+              </h2>
+
+              <p
+                class="desc-repo text-sm text-colorLightSecondary font-light mt-4 mb-5"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div
+                class="more-data-repo flex items-center text-colorLightSecondary max-sm:text-sm"
+              >
+                <!-- if have lisence -->
+                <div class="license flex">
+                  <img src="./Chield_alt.svg" alt="chield" />
+                  <p>MIT</p>
+                </div>
+
+                <div class="nesting flex ml-3">
+                  <img src="./Nesting.svg" alt="nesting" />
+                  <p>243</p>
+                </div>
+
+                <div class="star flex ml-3">
+                  <img src="./Star.svg" alt="star" />
+                  <p>63</p>
+                </div>
+
+                <div
+                  class="time-update flex text-[12px] ml-5 max-sm:text-[10px]"
+                >
+                  <p>updated 3 days ago</p>
+                </div>
+              </div>
+            </a>
+            <a
+              class="w-[48%] p-4 mb-12 rounded-2xl bg-gradient-to-r from-colorDarkBackground to-colorDarkSecondary max-sm:w-full max-sm:mb-6"
+            >
+              <h2
+                class="title-repo font-normal text-lg text-colorLightBackground max-sm:text-base"
+              >
+                .github
+              </h2>
+
+              <p
+                class="desc-repo text-sm text-colorLightSecondary font-light mt-4 mb-5"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div
+                class="more-data-repo flex items-center text-colorLightSecondary max-sm:text-sm"
+              >
+                <!-- if have lisence -->
+                <div class="license flex">
+                  <img src="./Chield_alt.svg" alt="chield" />
+                  <p>MIT</p>
+                </div>
+
+                <div class="nesting flex ml-3">
+                  <img src="./Nesting.svg" alt="nesting" />
+                  <p>243</p>
+                </div>
+
+                <div class="star flex ml-3">
+                  <img src="./Star.svg" alt="star" />
+                  <p>63</p>
+                </div>
+
+                <div
+                  class="time-update flex text-[12px] ml-5 max-sm:text-[10px]"
+                >
+                  <p>updated 3 days ago</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <button
+            id="view-all-btn"
+            class="w-fit text-colorLightBackground/50 font-light text-center mb-5"
+          >
+            View all repositories
+          </button>
+          <footer>
+            <div class="footer text-center">
+              <h4 class="text-colorLightSecondary">
+                Made with 💕 by
+                <a
+                  class="transition-all hover:text-colorPrimaryAccent"
+                  href="https://github.com/sajjadnazaridev/"
+                  >Sajjad Nazari</a
+                >
+              </h4>
+            </div>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

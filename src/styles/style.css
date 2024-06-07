@@ -1,0 +1,11 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container{
+  background: center no-repeat url(../hero-image-github-profile.png);
+  background-size: cover;
+}
