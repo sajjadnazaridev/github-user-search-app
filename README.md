@@ -1,6 +1,6 @@
 # [GitHub User Search App](https://github-user-search-app-nz.netlify.app/)
 
-![GitHub User Search App](https://raw.githubusercontent.com/sajjadnazaridev/github-user-search-app/main/src/public/images/screenshot.jpg)
+![GitHub User Search App](https://raw.githubusercontent.com/sajjadnazaridev/github-user-search-app/main/src/public/screenshot.jpg)
 
 ## About the Project
 
@@ -34,8 +34,8 @@ During the development of this project, the following skills were improved:
 
 ### UI Project
 
-![Desktop](https://raw.githubusercontent.com/sajjadnazaridev/github-user-search-app/main/src/public/images/screenshot.jpg)
-![Mobile](https://raw.githubusercontent.com/sajjadnazaridev/github-user-search-app/main/src/public/images/screenshot-mobile.jpg)
+![Desktop](https://raw.githubusercontent.com/sajjadnazaridev/github-user-search-app/main/src/public/screenshot.jpg)
+![Mobile](https://raw.githubusercontent.com/sajjadnazaridev/github-user-search-app/main/src/public/screenshot-mobile.jpg)
 
 ## Tools and Libraries Used
 
