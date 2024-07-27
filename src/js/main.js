@@ -1,5 +1,7 @@
 "use strict";
 
+import axios from "axios";
+
 // Selecting the necessary DOM elements
 const inputSearch = document.getElementById('input-search-username');
 const resultSearchBox = document.getElementById('result-search-box');
@@ -16,12 +18,11 @@ let debounceTimeout; // Timeout ID for debouncing
 // Function to fetch user data from GitHub API
 async function requestSearch(username) {
   try {
-    let response = await fetch(`https://api.github.com/users/${username}`);
-    if (!response.ok) throw new Error('Error in requesting search');
-    return await response.json();
+    const response = await axios.get(`https://api.github.com/users/${username}`);
+    return response.data;
   } catch (error) {
     console.error(error);
-    return { message: 'User not found' }; // Return an error message object
+    return { message: 'User not found' };
   }
 }
 
@@ -39,9 +40,8 @@ function importData(data) {
 // Function to fetch user repositories from GitHub API
 async function requestRepos(username) {
   try {
-    let response = await fetch(`https://api.github.com/users/${username}/repos`);
-    if (!response.ok) throw new Error('Error in requesting repos');
-    reposUser = await response.json(); // Store repositories in global array
+    const response = await axios.get(`https://api.github.com/users/${username}/repos`);
+    reposUser = response.data; // Store repositories in global array
     importRepos(reposUser.slice(0, 4)); // Display the first 4 repositories
   } catch (error) {
     console.error(error);
@@ -69,9 +69,8 @@ function importRepos(dataRepos) {
 // Event listener for the "View All" button to display all repositories
 viewAllBtn.addEventListener('click', () => {
   importRepos(reposUser); // Display all repositories
-  // Hide the button after clicking
   viewAllBtn.classList.remove('block');
-  viewAllBtn.classList.add('hidden');
+  viewAllBtn.classList.add('hidden'); // Hide the button after clicking
 });
 
 // Event listener for input field to search users
@@ -109,9 +108,8 @@ inputSearch.addEventListener('input', () => {
 
         // Event handler to show the user data and repositories when a result is clicked
         resultSearchBox.onclick = async () => {
-          // Show the "View All" button
           viewAllBtn.classList.add('block');
-          viewAllBtn.classList.remove('hidden');
+          viewAllBtn.classList.remove('hidden'); // Show the "View All" button
           importData(resultUserData); // Populate user data
           await requestRepos(resultUserData.login); // Fetch and display user repositories
         };
